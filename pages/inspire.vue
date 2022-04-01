@@ -15,7 +15,30 @@
 </template>
 
 <script>
+import { UnityWebgl } from 'unity-webgl'
+
+const Unity = new UnityWebgl({
+  loaderUrl: '~/Build/tetris-demo.loader.js',
+  dataUrl: "~/Build/tetris-demo.data",
+  frameworkUrl: "~/Build/tetris-demo.framework.js",
+  codeUrl: "~/Build/tetris-demo.wasm"
+})
+
 export default {
-  name: 'InspirePage',
+  name: 'VideoGamePage',
+  middleware: "login",
+  components: {
+    Unity: UnityWebgl.vueComponent
+  },
+  data() {
+    return {
+      unityContext: Unity,
+      loading: true,
+    };
+  },
+
+  created() {},
+
+  methods: {},
 }
 </script>
