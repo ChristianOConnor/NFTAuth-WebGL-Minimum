@@ -8,39 +8,44 @@
 
     <v-row style="margin-bottom: 20px">
       <v-col>
-        <Unity :unity="unityContext" width="800px" height="600px" />
+        <client-only>
+          <Unity :unity="unityContext" width="800px" height="600px" />
+        </client-only>
       </v-col>
     </v-row>
   </v-layout>
 </template>
 
 <script>
-/* import { UnityWebgl } from 'unity-webgl'
+import UnityWebgl from 'unity-webgl'
 
 const Unity = new UnityWebgl({
-  loaderUrl: '~/Build/look-away-webGLbuild1-uncomp.loader.js',
-  dataUrl: "~/Build/look-away-webGLbuild1-uncomp.data",
-  frameworkUrl: "~/Build/look-away-webGLbuild1-uncomp.framework.js",
-  codeUrl: "~/Build/look-away-webGLbuild1-uncomp.wasm"
-}) */
+  // loaderUrl: '/Build/look-away-webGLbuild1-uncomp.loader.js',
+  loaderUrl: '/Build/tetris-demo.loader.js',
+  // dataUrl: '/Build/look-away-webGLbuild1-uncomp.data',
+  dataUrl: '/Build/tetris-demo.data',
+  // frameworkUrl: '/Build/look-away-webGLbuild1-uncomp.framework.js',
+  frameworkUrl: '/Build/tetris-demo.framework.js',
+  // codeUrl: '/Build/look-away-webGLbuild1-uncomp.wasm',
+  codeUrl: '/Build/tetris-demo.wasm',
+})
 
 export default {
   name: 'VideoGamePage',
   components: {
-    //Unity: UnityWebgl.vueComponent
+    Unity: UnityWebgl.vueComponent,
   },
   data() {
     return {
-      //unityContext: Unity,
+      unityContext: Unity,
       loading: true,
-    };
+    }
   },
 
   created() {},
 
   methods: {},
-};
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
