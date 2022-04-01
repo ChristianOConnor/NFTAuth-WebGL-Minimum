@@ -81,6 +81,11 @@ export default {
           title: 'Inspire',
           to: '/inspire',
         },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'VideoGamePage',
+          to: '/video-game',
+        },
       ],
       miniVariant: false,
       right: true,
