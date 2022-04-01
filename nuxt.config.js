@@ -1,6 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  ssr: false,
+  //i changed this to ssr:false, otherwise "window" will be undefined in SSR mode.
+  // You could try adding this in the plugins file
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - NFTAuth-WebGL-Minimum',
@@ -19,6 +22,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
+  script: [
+    {
+      type: 'text/javascript',
+      src: '~/Build/look-away-webGLbuild1-uncomp.loader.js',
+    },
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
