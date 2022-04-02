@@ -20,13 +20,9 @@
 import UnityWebgl from 'unity-webgl'
 
 const Unity = new UnityWebgl({
-  // loaderUrl: '/Build/look-away-webGLbuild1-uncomp.loader.js',
   loaderUrl: '/Build/tetris-demo.loader.js',
-  // dataUrl: '/Build/look-away-webGLbuild1-uncomp.data',
   dataUrl: '/Build/tetris-demo.data',
-  // frameworkUrl: '/Build/look-away-webGLbuild1-uncomp.framework.js',
   frameworkUrl: '/Build/tetris-demo.framework.js',
-  // codeUrl: '/Build/look-away-webGLbuild1-uncomp.wasm',
   codeUrl: '/Build/tetris-demo.wasm',
 })
 
