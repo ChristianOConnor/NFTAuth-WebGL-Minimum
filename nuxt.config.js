@@ -22,13 +22,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
-  script: [
-    {
-      type: 'text/javascript',
-      src: '~/Build/look-away-webGLbuild1-uncomp.loader.js',
-    },
-  ],
-
+  
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
