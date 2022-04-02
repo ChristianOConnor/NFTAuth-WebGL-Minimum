@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  ssr: false,
+  ssr: true,
   //i changed this to ssr:false, otherwise "window" will be undefined in SSR mode.
   // You could try adding this in the plugins file
   // Global page headers: https://go.nuxtjs.dev/config-head
